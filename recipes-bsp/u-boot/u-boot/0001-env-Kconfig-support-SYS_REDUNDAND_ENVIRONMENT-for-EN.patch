@@ -1,0 +1,30 @@
+From 5fbc00563c4b84aea531fafcb7fce567a091a3a0 Mon Sep 17 00:00:00 2001
+From: Ming Liu <liu.ming50@gmail.com>
+Date: Mon, 12 Oct 2020 10:58:46 +0200
+Subject: [PATCH] env:Kconfig: support SYS_REDUNDAND_ENVIRONMENT for
+ ENV_IS_IN_FAT
+
+Upstream-Status: Inappropriate [mender specific]
+
+Signed-off-by: Ming Liu <liu.ming50@gmail.com>
+---
+ env/Kconfig | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/env/Kconfig b/env/Kconfig
+index ed12609f6a..f486a3b4c6 100644
+--- a/env/Kconfig
++++ b/env/Kconfig
+@@ -391,7 +391,8 @@ config ENV_IS_IN_UBI
+ config SYS_REDUNDAND_ENVIRONMENT
+ 	bool "Enable redundant environment support"
+ 	depends on ENV_IS_IN_EEPROM || ENV_IS_IN_FLASH || ENV_IS_IN_MMC || \
+-		ENV_IS_IN_NAND || ENV_IS_IN_SPI_FLASH || ENV_IS_IN_UBI
++		ENV_IS_IN_NAND || ENV_IS_IN_SPI_FLASH || ENV_IS_IN_UBI || \
++		ENV_IS_IN_FAT
+ 	help
+ 	  Normally, the environemt is stored in a single location.  By
+ 	  selecting this option, you can then define where to hold a redundant
+-- 
+2.28.0
+
