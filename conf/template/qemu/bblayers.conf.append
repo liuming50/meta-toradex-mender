@@ -1,0 +1,1 @@
+BBLAYERS += "${TORADEX_TOP_DIR}/layers/meta-mender/meta-mender-qemu"

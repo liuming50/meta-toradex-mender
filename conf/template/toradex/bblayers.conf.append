@@ -1,0 +1,9 @@
+BBLAYERS += " \
+    ${TORADEX_TOP_DIR}/layers/meta-toradex-nxp \
+    ${TORADEX_TOP_DIR}/layers/meta-freescale \
+    ${TORADEX_TOP_DIR}/layers/meta-freescale-3rdparty \
+    ${TORADEX_TOP_DIR}/layers/meta-toradex-bsp-common \
+    ${TORADEX_TOP_DIR}/layers/meta-freescale-distro \
+    ${TORADEX_TOP_DIR}/layers/meta-toradex-demos \
+    ${TORADEX_TOP_DIR}/layers/meta-toradex-distro \
+"

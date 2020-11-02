@@ -1,0 +1,27 @@
+
+-------------------------------------------------------------------------
+ _____                   _             __  __                _           
+|_   _|__  _ __ __ _  __| | _____  __ |  \/  | ___ _ __   __| | ___ _ __ 
+  | |/ _ \| '__/ _` |/ _` |/ _ \ \/ / | |\/| |/ _ \ '_ \ / _` |/ _ \ '__|
+  | | (_) | | | (_| | (_| |  __/>  <  | |  | |  __/ | | | (_| |  __/ |   
+  |_|\___/|_|  \__,_|\__,_|\___/_/\_\ |_|  |_|\___|_| |_|\__,_|\___|_|   
+                                                                       
+-------------------------------------------------------------------------
+
+Common targets are:
+    console-tdx-image
+    lxde-image
+    lxqt-image
+    qt5-x11-image
+
+You can run bitbake as follows to build a specific image:
+    bitbake console-tdx-image
+
+
+#### For qemu machine####
+
+Start qemu test machine:
+    runqemu qemuarm64
+
+Connect to qemu virtual machine by VNC:
+    xtightvncviewer 127.0.0.1

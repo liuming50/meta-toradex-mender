@@ -1,0 +1,22 @@
+INHERIT_remove_colibri-imx6ull = "mender-full"
+INHERIT_append_colibri-imx6ull = " mender-full-ubi"
+MENDER_FEATURES_ENABLE_append_colibri-imx6ull = " mender-image-ubi"
+MENDER_STORAGE_TOTAL_SIZE_MB_colibri-imx6ull = "512"
+MENDER_STORAGE_PEB_SIZE_colibri-imx6ull = "131072"
+MENDER_MTD_UBI_DEVICE_NAME_colibri-imx6ull = "ubi"
+MENDER_MTDIDS_colibri-imx6ull = "nand0=gpmi-nand"
+MENDER_MTDPARTS_colibri-imx6ull = "gpmi-nand:512k(mx6ull-bcb),1536k(u-boot1)ro,1536k(u-boot2)ro,512k(u-boot-env),-(ubi)"
+MENDER_RESERVED_SPACE_BOOTLOADER_DATA_colibri-imx6ull = "262144"
+MENDER_PARTITION_ALIGNMENT_colibri-imx6ull = "4096"
+IMAGE_FSTYPES_remove = "wic wic.gz tar.xz teziimg dataimg mtdimg ubimg ubimg.bmap"
+IMAGE_FSTYPES_append = " tezimender"
+IMAGE_CLASSES_remove = "image_type_tezi image_types_fsl"
+IMAGE_CLASSES_append = " image_types_tezimender"
+IMAGE_NAME_SUFFIX_colibri-imx6ull = ".rootfs"
+IMAGE_BOOT_FILES_remove = "${KERNEL_IMAGETYPE} ${@make_dtb_boot_files(d)}"
+
+BBMASK += " \
+    /meta-freescale-3rdparty/recipes-bsp/u-boot/u-boot-toradex_2016.11.bb \
+    /meta-toradex-nxp/recipes-bsp/u-boot/u-boot-toradex_2016.11.bbappend \
+    /meta-toradex-nxp/recipes-bsp/u-boot/u-boot-toradex_2018.03.bb \
+"
