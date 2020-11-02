@@ -1,4 +1,4 @@
-# meta-toradex
+# meta-toradex-mender
 OpenEmbedded/Yocto BSP Toradex Mender layer
 
 
@@ -105,7 +105,7 @@ Set up the environment:
 
 ```
 $ cd ~/toradex-mender-workspace
-$ TEMPLATE=(qemu|toradex) . poky-init-build-env
+$ . poky-init-build-env
 $ bitbake console-tdx-image
 ```
 
