@@ -89,7 +89,7 @@ To be noticed: In the following two steps, you might be asked for github usernam
 ```
 $ mkdir ~/toradex-mender-workspace
 $ cd ~/toradex-mender-workspace
-$ repo init -u https://github.com/liuming50/toradex-mender-manifests.git -b master
+$ repo init -u https://github.com/liuming50/toradex-mender-manifests.git -b main
 ```
 
 Enter the following command to pull down the source tree to your working directory. The repo sync operation might take time depending on your Internet download speed.
