@@ -7,13 +7,13 @@ fi
 run mender_setup
 ubifsmount ${mender_boot_part_name}
 
+env set bootargs ubi.mtd=ubi root=${mender_boot_part_name} rootfstype=ubifs ubi.fm_autoconvert=1 console=tty1 console=ttymxc0,115200n8 consoleblank=0 video=mxsfb:640x480M-16@60 ${bootargs}
+
 if test ${mender_boot_part} = "0"
 then
-    env set bootargs ubi.mtd=ubi root=/dev/ubi0_1 rootfstype=ubifs ubi.fm_autoconvert=1 ${bootargs}
     load ${devtype} ${devnum}:2 ${kernel_addr_r} /boot/${mender_kernel_name}
     load ${devtype} ${devnum}:2 ${fdt_addr_r} /boot/${mender_dtb_name}
 else
-    env set bootargs ubi.mtd=ubi root=/dev/ubi0_2 rootfstype=ubifs ubi.fm_autoconvert=1 ${bootargs}
     load ${devtype} ${devnum}:3 ${kernel_addr_r} /boot/${mender_kernel_name}
     load ${devtype} ${devnum}:3 ${fdt_addr_r} /boot/${mender_dtb_name}
 fi

@@ -8,12 +8,15 @@ MENDER_MTDIDS_colibri-imx6ull = "nand0=gpmi-nand"
 MENDER_MTDPARTS_colibri-imx6ull = "gpmi-nand:512k(mx6ull-bcb),1536k(u-boot1)ro,1536k(u-boot2)ro,512k(u-boot-env),-(ubi)"
 MENDER_RESERVED_SPACE_BOOTLOADER_DATA_colibri-imx6ull = "262144"
 MENDER_PARTITION_ALIGNMENT_colibri-imx6ull = "4096"
+MENDER_DATA_PART_colibri-imx6ull = "ubi0_3"
 IMAGE_FSTYPES_remove = "wic wic.gz tar.xz teziimg dataimg mtdimg ubimg ubimg.bmap"
 IMAGE_FSTYPES_append = " tezimender"
 IMAGE_CLASSES_remove = "image_type_tezi image_types_fsl"
 IMAGE_CLASSES_append = " image_types_tezimender"
 IMAGE_NAME_SUFFIX_colibri-imx6ull = ".rootfs"
 IMAGE_BOOT_FILES_remove = "${KERNEL_IMAGETYPE} ${@make_dtb_boot_files(d)}"
+
+DISTRO_FLAVOUR_colibri-imx6ull = " (MENDER)"
 
 BBMASK += " \
     /meta-freescale-3rdparty/recipes-bsp/u-boot/u-boot-toradex_2016.11.bb \
