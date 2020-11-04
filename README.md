@@ -104,6 +104,7 @@ $ repo sync
 Set up the environment:
 
 ```
+$ export MENDER_DEMO_HOST_IP_ADDRESS="YOUR-MENDER-SERVER-IP" # see below how to start a mender test server
 $ cd ~/toradex-mender-workspace
 $ . poky-init-build-env
 $ bitbake console-tdx-image
