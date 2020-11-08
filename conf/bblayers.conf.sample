@@ -25,7 +25,6 @@ BBLAYERS ?= " \
   ##OEROOT##/../meta-freescale-distro \
   ##OEROOT##/../meta-toradex-mender \
   ##OEROOT##/../meta-mender/meta-mender-core \
-  ##OEROOT##/../meta-mender/meta-mender-demo \
 "
 
 include bblayers.${TORADEX_TEMPLATE}.inc

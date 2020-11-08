@@ -1,0 +1,28 @@
+From 6514dd934487ef0d7dc584cc6c527109681833ab Mon Sep 17 00:00:00 2001
+From: Ming Liu <liu.ming50@gmail.com>
+Date: Fri, 6 Nov 2020 12:07:42 +0100
+Subject: [PATCH] env_mender.h: add more colibri-imx6ull specific bootargs
+
+Upstream-Status: Inappropriate [ mender specific ]
+
+Signed-off-by: Ming Liu <liu.ming50@gmail.com>
+---
+ include/env_mender.h | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/include/env_mender.h b/include/env_mender.h
+index 0605f6a9fad..09da2d7b8f5 100644
+--- a/include/env_mender.h
++++ b/include/env_mender.h
+@@ -83,6 +83,8 @@
+     "if test \"${mender_systemd_machine_id}\" != \"\"; "                \
+     "then "                                                             \
+     "setenv bootargs systemd.machine_id=${mender_systemd_machine_id} "  \
++    "ubi.fm_autoconvert=1 console=tty1 console=ttymxc0,115200n8 "       \
++    "consoleblank=0 video=mxsfb:640x480M-16@60 "                        \
+     "${bootargs}; "                                                     \
+     "fi; "                                                              \
+     "setenv mender_kernel_root " MENDER_STORAGE_DEVICE_BASE "${mender_boot_part}; "    \
+-- 
+2.29.0
+
