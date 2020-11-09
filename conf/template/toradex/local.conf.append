@@ -17,6 +17,9 @@ IMAGE_NAME_SUFFIX_colibri-imx6ull = ".rootfs"
 
 DISTRO_FLAVOUR_colibri-imx6ull = " (MENDER PRODUCTION)"
 
+PREFERRED_VERSION_mender = "2.2.1"
+PREFERRED_VERSION_mender-artifact = "3.3.1"
+
 BBMASK += " \
     /meta-freescale-3rdparty/recipes-bsp/u-boot/u-boot-toradex_2016.11.bb \
     /meta-toradex-nxp/recipes-bsp/u-boot/u-boot-toradex_2016.11.bbappend \
