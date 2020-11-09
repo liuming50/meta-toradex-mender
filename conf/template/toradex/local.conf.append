@@ -21,4 +21,5 @@ BBMASK += " \
     /meta-freescale-3rdparty/recipes-bsp/u-boot/u-boot-toradex_2016.11.bb \
     /meta-toradex-nxp/recipes-bsp/u-boot/u-boot-toradex_2016.11.bbappend \
     /meta-toradex-nxp/recipes-bsp/u-boot/u-boot-toradex_2018.03.bb \
+    /meta-toradex-mender/recipes-connectivity/ssh-demo-keys/ssh-demo-keys.bbappend \
 "
